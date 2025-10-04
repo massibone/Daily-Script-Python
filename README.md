@@ -9,3 +9,4 @@ Repository di script Python quotidiani.
 * image_utils: script per la manipolazione delle immagini
 next/* data_analysis: script per l'analisi dei dati
 next/* web_scraping: script per lo scraping web
+
