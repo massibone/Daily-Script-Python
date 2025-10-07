@@ -12,8 +12,6 @@ Features:
 - Gestione errori robusta
 - Validazione parametri
 
-Autore: Versione Ottimizzata
-Data: 2025
 """
 
 import os
@@ -69,7 +67,7 @@ DEFAULT_QUALITY = {
 
 
 # ============================================================================
-# ECCEZIONI PERSONALIZZATE
+# ECCEZIONI 
 # ============================================================================
 
 class ImageUtilsError(Exception):
@@ -173,7 +171,7 @@ def validate_size(size: Tuple[int, int]) -> Tuple[int, int]:
 
 
 # ============================================================================
-# FUNZIONI PRINCIPALI OTTIMIZZATE
+# FUNZIONI PRINCIPALI 
 # ============================================================================
 
 def resize_image(
@@ -402,7 +400,7 @@ def convert_image_format(
 
 
 # ============================================================================
-# FUNZIONI UTILITY
+#  UTILITY
 # ============================================================================
 
 def _get_save_kwargs(output_path: Path, quality: int, 
@@ -532,7 +530,7 @@ def batch_process_images(
 
 
 # ============================================================================
-# FUNZIONE MAIN - ESEMPI D'USO
+# FUNZIONE MAIN 
 # ============================================================================
 
 def main():
