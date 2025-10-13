@@ -11,7 +11,7 @@ Repository di script Python quotidiani.
 * auto_crop: crop facile per Instagram
 * crea_thumbnail: genera thumbnail da immagine scattata
 * scarica_postIG: salvai in una cartella post Instagram
-* MiniScript: Instagram API Media Reader
+* mini_script: Instagram API Media Reader
 next/* data_analysis: script per l'analisi dei dati
 next/* web_scraping: script per lo scraping web
 
