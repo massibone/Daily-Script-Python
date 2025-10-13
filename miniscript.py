@@ -1,5 +1,4 @@
 # MiniScript: Instagram API Media Reader
-
 #Questo mini script Python permette di visualizzare gli ultimi post pubblicati da un account Instagram Business o Creator collegato a una pagina Facebook, usando la Graph API ufficiale.
 
 ## Come funziona
