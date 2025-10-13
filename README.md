@@ -7,6 +7,7 @@ Repository di script Python quotidiani.
 * json2csv : convert file json to csv
 * rename_photo : rename all files in a folder
 * image_utils: script per la manipolazione delle immagini
+* download_images_profile: estre immagini profilo IG
 * auto_crop: crop facile per Instagram
 * crea_thumbnail: genera thumbnail da immagine scattata
 * scarica_postIG: salvai in una cartella post Instagram
