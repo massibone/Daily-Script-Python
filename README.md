@@ -8,6 +8,7 @@ Repository di script Python quotidiani.
 * rename_photo : rename all files in a folder
 * image_utils: script per la manipolazione delle immagini
 * download_images_profile: estre immagini profilo IG
+* upload_images: automazione upload immagini
 * auto_crop: crop facile per Instagram
 * crea_thumbnail: genera thumbnail da immagine scattata
 * resize_image: resize any images
