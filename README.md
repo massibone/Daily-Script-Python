@@ -1,6 +1,5 @@
 Daily-Script-Python/
 ├── README.md
-├
 │
 ├── pdf_tools/
 │   └── extract_text_from_pdf.py
@@ -12,12 +11,12 @@ Daily-Script-Python/
 │   ├── image_utils.py
 │   ├── rename_photos.py
 │   ├── resize_image.py
-│   ├── auto_crop_instagram.py
+│   ├── auto_crop.py
 │   ├── create_thumbnail.py
 │   └── exif_extractor.py
 │
 ├── instagram_automation/
-│   ├── download_profile_images.py
+│   ├── download_images_profile.py
 │   ├── upload_images.py
 │   ├── save_instagram_posts.py
 │   └── instagram_api_media_reader.py
