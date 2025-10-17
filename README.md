@@ -1,20 +1,35 @@
-# Daily-Script-Python
-Repository di script Python quotidiani.
-
-## Contenuto
-
-* Extract_text_from_pdf : extract text from pdf
-* json2csv : convert file json to csv
-* rename_photo : rename all files in a folder
-* image_utils: script per la manipolazione delle immagini
-* download_images_profile: estre immagini profilo IG
-* upload_images: automazione upload immagini
-* auto_crop: crop facile per Instagram
-* crea_thumbnail: genera thumbnail da immagine scattata
-* resize_image: resize any images
-* scarica_postIG: salva in una cartella post Instagram
-* exif_extractor: estrai info EXIF e organizza in CSV
-* mini_script: Instagram API Media Reader
-next/* data_analysis: script per l'analisi dei dati
-next/* web_scraping: script per lo scraping web
-
+Daily-Script-Python/
+├── README.md
+├
+│
+├── pdf_tools/
+│   └── extract_text_from_pdf.py
+│
+├── data_conversion/
+│   └── json2csv.py
+│
+├── image_processing/
+│   ├── image_utils.py
+│   ├── rename_photos.py
+│   ├── resize_image.py
+│   ├── auto_crop_instagram.py
+│   ├── create_thumbnail.py
+│   └── exif_extractor.py
+│
+├── instagram_automation/
+│   ├── download_profile_images.py
+│   ├── upload_images.py
+│   ├── save_instagram_posts.py
+│   └── instagram_api_media_reader.py
+│
+├── machine_learning/
+│   ├── photo_style_classifier.py          # ←  NUOVO CODICE?
+│   ├── logging_profiling_optimizer.py     # Sistema logging/profiling
+│   └── models/                            # Directory per modelli salvati
+│       └── .gitkeep
+│
+├── data_analysis/
+│   └── numpy_correlation_analysis.py
+│
+└── web_scraping/
+    └── (future scripts)
