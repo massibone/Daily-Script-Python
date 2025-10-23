@@ -10,7 +10,7 @@ Daily-Script-Python/
 ├── image_processing/
 │   ├── image_utils.py
 │   ├── rename_photos.py
-|   |-- rename_photos_by_date.py
+|   ├── rename_photos_by_date.py
 │   ├── resize_image.py
 │   ├── auto_crop.py
 │   ├── create_thumbnail.py
