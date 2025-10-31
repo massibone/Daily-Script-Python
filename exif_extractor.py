@@ -14,6 +14,7 @@ import logging
 # Configurazione logging
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 logger = logging.getLogger(__name__)
+
 class ExifExtractor:
     def __init__(self):
         self.supported_formats = ('.jpg', '.jpeg', '.tiff', '.tif')
