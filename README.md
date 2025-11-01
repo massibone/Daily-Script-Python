@@ -33,3 +33,4 @@ Daily-Script-Python/
 │
 └── web_scraping/
     └── (future scripts)
+    
