@@ -42,3 +42,7 @@ class ExifExtractor:
                         exif_dict[tag] = value
                         
                 return exif_dict
+                            
+        except Exception as e:
+            logger.error(f"Errore nell'estrazione EXIF da {image_path}: {e}")
+            return {}
