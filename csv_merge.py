@@ -1,8 +1,5 @@
 '''
-CSV Merge Tool - Unisce più file CSV in un unico file
-
-Questo script permette di combinare più file CSV in un singolo file di output.
-Supporta diverse modalità di unione e gestione degli header.
+Unisce più file CSV in un unico file
 
 Funzionalità:
 - Unione di multipli file CSV
@@ -113,29 +110,4 @@ if __name__ == '__main__':
     # Esempio d'uso quando eseguito direttamente
     # csv_merge(['a.csv', 'b.csv'], 'merged.csv')
     
-    # Oppure usa la CLI
-    csv_merge_cli()
-```
-
----
-
-## Dove posizionarlo nel README
-
-Suggerisco di aggiungerlo in una nuova sezione `data_conversion/`:
-```
-Daily-Script-Python/
-├── README.md
-├── pdf_tools/
-│   └── extract_text_from_pdf.py
-├── data_conversion/
-│   ├── json2csv.py
-│   └── csv_merge.py          # ← NUOVO SCRIPT
-├── image_processing/
-│   ├── image_utils.py
-│   ├── rename_photos.py
-│   ├── rename_photos_by_date.py
-│   ├── resize_image.py
-│   ├── auto_crop.py
-│   ├── create_thumbnail.py
-│   └── exif_extractor.py
-...
+    
