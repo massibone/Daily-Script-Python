@@ -3,7 +3,7 @@ Daily-Script-Python/
 │
 ├── pdf_tools/
 │   └── extract_text_from_pdf.py
-|       text-utils-cli.py
+|   └── text-utils-cli.py
 │
 ├── data_conversion/
 │   └── json2csv.py
