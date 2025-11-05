@@ -286,7 +286,8 @@ def main():
         print(f"❌ Errore: Comando '{command_name}' non trovato")
         print(f"\n💡 Usa 'python text_utils.py list' per vedere tutti i comandi disponibili")
         sys.exit(1)
-    
+
+
     # Verifica se c'è il testo da processare
     if len(sys.argv) < 3:
         print(f"❌ Errore: Manca il testo da processare")
