@@ -66,3 +66,80 @@ class ExifExtractor:
         except:
             return None
     
+    
+
+    def extract_key_info(self, exif_data, filename):
+        """Estrae le informazioni chiave dai dati EXIF"""
+        info = {
+            'Filename': filename,
+            'DateTime': exif_data.get('DateTime', ''),
+            'DateTimeOriginal': exif_data.get('DateTimeOriginal', ''),
+            'Make': exif_data.get('Make', ''),
+            'Model': exif_data.get('Model', ''),
+            'ExposureTime': '',
+            'FNumber': '',
+            'ISO': exif_data.get('ISOSpeedRatings', ''),
+            'FocalLength': '',
+            'Flash': '',
+            'WhiteBalance': exif_data.get('WhiteBalance', ''),
+            'ImageWidth': exif_data.get('ExifImageWidth', ''),
+            'ImageHeight': exif_data.get('ExifImageHeight', ''),
+            'Orientation': exif_data.get('Orientation', ''),
+            'GPS_Latitude': '',
+            'GPS_Longitude': '',
+            'GPS_Altitude': '',
+            'Software': exif_data.get('Software', '')
+        }
+        
+        # Gestione tempo di esposizione
+        if 'ExposureTime' in exif_data:
+            exp_time = exif_data['ExposureTime']
+            if isinstance(exp_time, tuple):
+                info['ExposureTime'] = f"{exp_time[0]}/{exp_time[1]}"
+            else:
+                info['ExposureTime'] = str(exp_time)
+        
+        # Gestione apertura
+        if 'FNumber' in exif_data:
+            f_num = exif_data['FNumber']
+            if isinstance(f_num, tuple):
+                info['FNumber'] = f"f/{f_num[0]/f_num[1]:.1f}"
+            else:
+                info['FNumber'] = f"f/{f_num}"
+        
+        # Gestione lunghezza focale
+        if 'FocalLength' in exif_data:
+            focal = exif_data['FocalLength']
+            if isinstance(focal, tuple):
+                info['FocalLength'] = f"{focal[0]/focal[1]:.1f}mm"
+            else:
+                info['FocalLength'] = f"{focal}mm"
+        
+        # Gestione flash
+        if 'Flash' in exif_data:
+            flash_value = exif_data['Flash']
+            info['Flash'] = 'Yes' if flash_value & 1 else 'No'
+        
+        # Gestione GPS
+        gps_info = exif_data.get('GPSInfo', {})
+        if gps_info:
+            lat_coord = gps_info.get('GPSLatitude')
+            lat_ref = gps_info.get('GPSLatitudeRef')
+            lon_coord = gps_info.get('GPSLongitude')
+            lon_ref = gps_info.get('GPSLongitudeRef')
+            alt_coord = gps_info.get('GPSAltitude')
+            
+            if lat_coord and lat_ref:
+                info['GPS_Latitude'] = self.convert_gps_to_decimal(lat_coord, lat_ref)
+            
+            if lon_coord and lon_ref:
+                info['GPS_Longitude'] = self.convert_gps_to_decimal(lon_coord, lon_ref)
+                
+            if alt_coord:
+                if isinstance(alt_coord, tuple):
+                    info['GPS_Altitude'] = f"{alt_coord[0]/alt_coord[1]:.2f}m"
+                else:
+                    info['GPS_Altitude'] = f"{alt_coord}m"
+        
+        return info
+    
