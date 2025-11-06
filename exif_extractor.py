@@ -46,3 +46,23 @@ class ExifExtractor:
         except Exception as e:
             logger.error(f"Errore nell'estrazione EXIF da {image_path}: {e}")
             return {}
+        
+    def convert_gps_to_decimal(self, gps_coord, gps_ref):
+        """Converte le coordinate GPS in formato decimale"""
+        try:
+            if not gps_coord or not gps_ref:
+                return None
+                
+            degrees = float(gps_coord[0])
+            minutes = float(gps_coord[1])
+            seconds = float(gps_coord[2])
+            
+            decimal = degrees + (minutes / 60.0) + (seconds / 3600.0)
+            
+            if gps_ref in ['S', 'W']:
+                decimal = -decimal
+                
+            return round(decimal, 6)
+        except:
+            return None
+    
