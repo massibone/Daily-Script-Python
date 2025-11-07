@@ -33,6 +33,8 @@ Daily-Script-Python/
 ├── data_analysis/
 │   └── numpy_correlation_analysis.py
 │
-└── web_scraping/
-    └── (future scripts)
+├── web_scraping/
+|   └── (future scripts)
+├── network_security/
+|    └── ransomware_traffic_analyzer.py
     
