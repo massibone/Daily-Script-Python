@@ -143,3 +143,102 @@ class ExifExtractor:
         
         return info
     
+    def process_directory(self, directory_path, output_csv):
+        """Processa tutte le immagini in una directory"""
+        if not os.path.exists(directory_path):
+            logger.error(f"Directory non trovata: {directory_path}")
+            return
+        
+        image_files = []
+        for root, dirs, files in os.walk(directory_path):
+            for file in files:
+                if file.lower().endswith(self.supported_formats):
+                    image_files.append(os.path.join(root, file))
+        
+        if not image_files:
+            logger.warning(f"Nessuna immagine trovata in: {directory_path}")
+            return
+        
+        logger.info(f"Trovate {len(image_files)} immagini da processare")
+        
+        # Prepara il file CSV
+        fieldnames = [
+            'Filename', 'DateTime', 'DateTimeOriginal', 'Make', 'Model',
+            'ExposureTime', 'FNumber', 'ISO', 'FocalLength', 'Flash',
+            'WhiteBalance', 'ImageWidth', 'ImageHeight', 'Orientation',
+            'GPS_Latitude', 'GPS_Longitude', 'GPS_Altitude', 'Software'
+        ]
+        
+        with open(output_csv, 'w', newline='', encoding='utf-8') as csvfile:
+            writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
+            writer.writeheader()
+            
+            for i, image_path in enumerate(image_files, 1):
+                logger.info(f"Processando ({i}/{len(image_files)}): {os.path.basename(image_path)}")
+                
+                exif_data = self.get_exif_data(image_path)
+                if exif_data:
+                    key_info = self.extract_key_info(exif_data, os.path.basename(image_path))
+                    writer.writerow(key_info)
+                else:
+                    # Scrivi una riga con solo il nome del file se non ci sono dati EXIF
+                    empty_row = {field: '' for field in fieldnames}
+                    empty_row['Filename'] = os.path.basename(image_path)
+                    writer.writerow(empty_row)
+        
+        logger.info(f"Dati EXIF estratti e salvati in: {output_csv}")
+    
+    def process_single_file(self, image_path, output_csv):
+        """Processa una singola immagine"""
+        if not os.path.exists(image_path):
+            logger.error(f"File non trovato: {image_path}")
+            return
+        
+        if not image_path.lower().endswith(self.supported_formats):
+            logger.error(f"Formato file non supportato: {image_path}")
+            return
+        
+        exif_data = self.get_exif_data(image_path)
+        
+        fieldnames = [
+            'Filename', 'DateTime', 'DateTimeOriginal', 'Make', 'Model',
+            'ExposureTime', 'FNumber', 'ISO', 'FocalLength', 'Flash',
+            'WhiteBalance', 'ImageWidth', 'ImageHeight', 'Orientation',
+            'GPS_Latitude', 'GPS_Longitude', 'GPS_Altitude', 'Software'
+        ]
+        
+        with open(output_csv, 'w', newline='', encoding='utf-8') as csvfile:
+            writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
+            writer.writeheader()
+            
+            if exif_data:
+                key_info = self.extract_key_info(exif_data, os.path.basename(image_path))
+                writer.writerow(key_info)
+            else:
+                empty_row = {field: '' for field in fieldnames}
+                empty_row['Filename'] = os.path.basename(image_path)
+                writer.writerow(empty_row)
+        
+        logger.info(f"Dati EXIF estratti e salvati in: {output_csv}")
+
+def main():
+    parser = argparse.ArgumentParser(description='Estrai info EXIF e organizza in CSV')
+    parser.add_argument('input', help='File immagine o directory da processare')
+    parser.add_argument('-o', '--output', default='exif_data.csv',
+                       help='Nome del file CSV di output (default: exif_data.csv)')
+    
+    args = parser.parse_args()
+    
+    extractor = ExifExtractor()
+    
+    if os.path.isdir(args.input):
+        extractor.process_directory(args.input, args.output)
+    elif os.path.isfile(args.input):
+        extractor.process_single_file(args.input, args.output)
+    else:
+        logger.error(f"Input non valido: {args.input}")
+        sys.exit(1)
+
+if __name__ == "__main__":
+    main()
+
