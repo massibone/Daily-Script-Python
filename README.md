@@ -27,6 +27,7 @@ Daily-Script-Python/
 ├── machine_learning/
 │   ├── photo_style_classifier.py          # ←  NUOVO CODICE?
 │   ├── logging_profiling_optimizer.py     # Sistema logging/profiling
+│   ├── 
 │   └── models/                            # Directory per modelli salvati
 │       └── .gitkeep
 │
