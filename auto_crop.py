@@ -1,5 +1,6 @@
 #esegue un'operazione di crop facile per Instagram 
 from PIL import Image
+
 def auto_crop(image, ratio):
 """
 Esegue un'operazione di crop facile per Instagram.
