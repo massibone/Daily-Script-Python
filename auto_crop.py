@@ -45,3 +45,4 @@ cropped_image = auto_crop(image, 1.91)
 
 # Salva l'immagine cropata
 cropped_image.save("output.jpg")
+
