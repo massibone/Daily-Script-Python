@@ -25,7 +25,7 @@ Daily-Script-Python/
 │   └── instagram_api_media_reader.py
 │
 ├── machine_learning/
-│   ├── photo_style_classifier.py          # ←  NUOVO CODICE?
+│   ├── photo_style_classifier.py          # 
 │   ├── logging_profiling_optimizer.py     # Sistema logging/profiling
 │   ├── 
 │   └── models/                            # Directory per modelli salvati
