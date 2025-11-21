@@ -1,0 +1,48 @@
+## 🚗 Transportation
+
+Script per calcoli relativi a trasporti, veicoli e mobilità.
+
+### vehicle_calculator.py
+Sistema OOP per calcolare consumo, autonomia, costi ed emissioni di veicoli.
+
+**Funzionalità:**
+- ✅ Supporto per auto benzina/diesel, elettriche, ibride, moto, camion
+- ✅ Calcolo autonomia massima (range)
+- ✅ Consumo per 100 km
+- ✅ Costo per km e totale
+- ✅ Emissioni CO₂
+- ✅ Confronto multiplo veicoli
+- ✅ Report dettagliati formattati
+
+**Uso:**
+```python
+from transportation.vehicle_calculator import Car, ElectricCar, vehicle_analyzer
+
+# Crea veicolo
+car = Car(
+    fuel_efficiency=18,  # km/l
+    fuel_capacity=50,    # litri
+    fuel_cost=1.75,      # €/l
+    brand="Toyota",
+    model="Corolla"
+)
+
+# Analizza
+print(vehicle_analyzer(car))
+
+# Confronta veicoli
+electric = ElectricCar(16, 75, 0.25, "Tesla", "Model 3")
+print(compare_vehicles([car, electric]))
+```
+
+**Esempio terminale:**
+```bash
+python transportation/vehicle_calculator.py
+```
+
+**Tipi supportati:**
+- `Car` - Auto benzina/diesel
+- `ElectricCar` - Auto elettrica
+- `HybridCar` - Auto ibrida
+- `Motorcycle` - Moto
+- `Truck` - Camion/furgone
