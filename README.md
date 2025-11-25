@@ -40,7 +40,12 @@ Daily-Script-Python/
 ├── network_security/
 │   └── ransomware_traffic_analyzer.py
 │
-└── transportation/                          # ← NUOVA CARTELLA
+├── oop_examples/                        # Esempi educativi OOP
+│   ├── management_systems/              # I 5 sistemi
+│   ├── equation_solver/                 # Codice FreeCodeCamp
+│   └── design_patterns/                 # Altri pattern
+│
+└── transportation/                          # 
     ├── vehicle_calculator.py               # Script principale
     ├── vector_math.py                      # Libreria vettori (opzionale)
     └── examples/                           # Esempi d'uso
