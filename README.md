@@ -41,9 +41,13 @@ Daily-Script-Python/
 │   └── ransomware_traffic_analyzer.py
 │
 ├── oop_examples/                        # Esempi educativi OOP
-│   ├── management_systems/              # I 5 sistemi
-│   ├── equation_solver/                 # Codice FreeCodeCamp
-│   └── design_patterns/                 # Altri pattern
+│   ├── __init__.py
+│   ├── oop_patterns.py              # File con tutti e 5 gli esempi
+│   ├── payment_system.py            # Esempio 1 separato
+│   ├── workout_plans.py             # Esempio 2 separato
+│   ├── data_formats.py              # Esempio 3 separato
+│   ├── delivery_services.py         # Esempio 4 separato
+│   └── media_players.py             # Esempio 5 separato
 │
 └── transportation/                          # 
     ├── vehicle_calculator.py               # Script principale
