@@ -57,10 +57,6 @@ converter.decode_from_file("input.txt", "output.pdf")
 }
 ```
 
-## 🎨 Screenshot GUI
-
-[Qui puoi aggiungere uno screenshot della GUI]
-
 ## 📝 Formati Supportati
 
 | Formato | Estensione | MIME Type |
