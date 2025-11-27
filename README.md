@@ -34,12 +34,12 @@ Daily-Script-Python/
 ├── data_analysis/
 │   └── numpy_correlation_analysis.py
 └── file_converters/
-│    ├── base64_converter.py       # File principale
-│    ├── README.md
-│    ├── requirements.txt
-│    └── examples/
-│        ├── codice-base64.txt
-│        └── esempio.json│
+│   ├── base64_converter.py       # File principale
+│   ├── README.md
+│   ├── requirements.txt
+│   └── examples/
+│       ├── codice-base64.txt
+│       └── esempio.json│
 ├── web_scraping/
 │   └── (future scripts)
 │
