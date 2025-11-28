@@ -41,7 +41,7 @@ Daily-Script-Python/
 │       ├── codice-base64.txt
 │       └── esempio.json│
 ├── web_scraping/
-│   └── (future scripts)
+│   └── scraper.py
 │
 ├── network_security/
 │   └── ransomware_traffic_analyzer.py
