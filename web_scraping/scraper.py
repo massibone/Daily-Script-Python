@@ -1,3 +1,15 @@
+import requests
+from bs4 import BeautifulSoup
+import pandas as pd
+import numpy as np
+from typing import Dict, List, Optional, Union, Tuple
+import json
+import logging
+from pathlib import Path
+from datetime import datetime
+import re
+
+
 class WebScraper:
     """
     Snippet modulare per web scraping.
