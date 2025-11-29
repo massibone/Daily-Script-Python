@@ -18,7 +18,7 @@ Daily-Script-Python/
 │   ├── auto_crop.py
 │   ├── create_thumbnail.py
 │   └── exif_extractor.py
-│
+│   
 ├── instagram_automation/
 │   ├── download_images_profile.py
 │   ├── upload_images.py
@@ -28,13 +28,14 @@ Daily-Script-Python/
 ├── machine_learning/
 │   ├── photo_style_classifier.py
 │   ├── logging_profiling_optimizer.py
+|   |--- ml_predictor.py 
 │   └── models/
 │       └── .gitkeep
 │
 ├── data_analysis/
 │   └── numpy_correlation_analysis.py
 └── file_converters/
-│   ├── base64_converter.py       # File principale
+│   ├── base64_converter.py       # File principale 
 │   ├── README.md
 │   ├── requirements.txt
 │   └── examples/
