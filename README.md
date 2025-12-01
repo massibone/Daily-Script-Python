@@ -27,8 +27,9 @@ Daily-Script-Python/
 │
 ├── machine_learning/
 │   ├── photo_style_classifier.py
-│   ├── logging_profiling_optimizer.py
-|   |--- ml_predictor.py 
+│   ├── linear_regression_boston.py
+|   ├── logging_profiling_optimizer.py
+|   ├─  ml_predictor.py 
 │   └── models/
 │       └── .gitkeep
 │
