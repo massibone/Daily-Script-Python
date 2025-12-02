@@ -18,6 +18,7 @@ Daily-Script-Python/
 │   ├── resize_image.py
 │   ├── auto_crop.py
 │   ├── create_thumbnail.py
+│   ├── rename_photos_by_exif.py
 │   └── exif_extractor.py
 │   
 ├── instagram_automation/
