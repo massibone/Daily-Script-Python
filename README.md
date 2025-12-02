@@ -8,6 +8,7 @@ Daily-Script-Python/
 ├── data_conversion/
 │   ├── json2csv.py
 │   ├── csv_merge.py
+│   ├── clean_csv.py 
 │   └── processa_CSV.py
 │
 ├── image_processing/
