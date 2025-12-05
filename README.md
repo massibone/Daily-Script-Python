@@ -49,6 +49,8 @@ Daily-Script-Python/
 │
 ├── network_security/
 │   └── ransomware_traffic_analyzer.py
+│   ├── intrusion_detection_tree.py
+│   ├── intrusioni_rete.csv
 │
 ├── oop_examples/                        # Esempi educativi OOP
 │   ├── __init__.py
