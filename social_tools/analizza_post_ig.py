@@ -2,7 +2,6 @@ import pandas as pd
 from collections import Counter
 import re
 
-
 def analizza_performance(csv_file):
     df = pd.read_csv(csv_file)  # Colonne: 'caption', 'likes', 'comments', 'hashtags'
     
