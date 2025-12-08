@@ -7,6 +7,7 @@ import openai
 import os
 
 openai.api_key = os.getenv("OPENAI_API_KEY")
+
 def genera_caption(descrizione, stile="street"):
     response = openai.ChatCompletion.create(
         model="gpt-4o-mini",
