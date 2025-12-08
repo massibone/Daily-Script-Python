@@ -19,3 +19,8 @@ def genera_caption(descrizione, stile="street"):
     )
     return response.choices[0].message.content.strip()
   
+
+# Esempio
+caption = genera_caption("Vicoli Firenze pioggia, riflessi luci, passanti ombre")
+print(caption)
+# Output: "Pioggia sui vicoli di Firenze, magia negli riflessi 🌧️ Qual è il tuo scatto sotto la pioggia preferito?"
