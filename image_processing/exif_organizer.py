@@ -24,3 +24,23 @@ def extract_exif(image_path: Path) -> dict[str, str]:
             }
     except Exception:
         return {"date": "unknown", "iso": "unknown"}
+
+def organize_photos(src_dir: Path, dst_dir: Path) -> List[str]:
+    """Crea cartelle YYYY-MM/ISO e sposta le foto."""
+    dst_dir.mkdir(exist_ok=True)
+    moved = []
+
+    for img in src_dir.glob("*.jpg"):
+        exif = extract_exif(img)
+
+        # gestisce date mancanti
+        folder_date = exif["date"][:7] if exif["date"] not in ("unknown", None) else "no_date"
+        folder_iso = f"ISO{exif['iso']}" if exif["iso"] != "unknown" else "ISO_unknown"
+
+        target = dst_dir / folder_date / folder_iso
+        target.mkdir(parents=True, exist_ok=True)
+
+        shutil.move(img, target / img.name)
+        moved.append(str(img))
+
+    return moved
