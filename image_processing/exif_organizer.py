@@ -44,3 +44,14 @@ def organize_photos(src_dir: Path, dst_dir: Path) -> List[str]:
         moved.append(str(img))
 
     return moved
+
+
+
+if __name__ == "__main__":
+    parser = argparse.ArgumentParser(description="Organizzatore foto basato su EXIF")
+    parser.add_argument("src", type=Path, help="Cartella sorgente")
+    parser.add_argument("dst", type=Path, help="Cartella di destinazione")
+    args = parser.parse_args()
+
+    print(organize_photos(args.src, args.dst))
+
