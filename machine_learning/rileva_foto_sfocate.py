@@ -1,6 +1,7 @@
 # Rileva foto "anomalie" (es. sfocate) da metadata (ISO/shutter troppo estremi). 
 
 """Rileva outlier foto da EXIF con Isolation Forest."""
+
 from sklearn.ensemble import IsolationForest
 import pandas as pd
 import numpy as np
