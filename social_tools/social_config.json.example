@@ -1,0 +1,22 @@
+{
+  "instagram": {
+    "username": "your_instagram_username",
+    "password": "your_instagram_password"
+  },
+  "twitter": {
+    "bearer_token": "YOUR_TWITTER_BEARER_TOKEN_HERE",
+    "api_key": "optional_for_v1_api",
+    "api_secret": "optional_for_v1_api",
+    "access_token": "optional_for_v1_api",
+    "access_secret": "optional_for_v1_api"
+  }
+}
+```
+
+## 📝 **examples/usernames_instagram.txt**
+```
+@natgeo
+@nasa
+@bbcearth
+@nationalgeographic
+@discovery
