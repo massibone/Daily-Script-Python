@@ -1,0 +1,156 @@
+# Social Media Tools
+
+Collezione di tool per automatizzare operazioni su social media.
+
+## 📸 download_images_profile.py
+
+Scarica immagini da profili social media (Instagram, Twitter/X).
+
+### Caratteristiche
+
+- ✅ Supporto Instagram (via instaloader)
+- ✅ Supporto Twitter/X (via tweepy)
+- ✅ Download batch multipli profili
+- ✅ Salvataggio metadata (likes, commenti, data)
+- ✅ Gestione rate limits automatica
+- ✅ Skip immagini già scaricate
+
+### Installazione
+```bash
+# Instagram
+pip install instaloader
+
+# Twitter
+pip install tweepy
+
+# Entrambi
+pip install -r requirements.txt
+```
+
+### Configurazione Credenziali
+
+Copia `social_config.json.example` in `social_config.json` e compila:
+```json
+{
+  "instagram": {
+    "username": "tuo_username",
+    "password": "tua_password"
+  },
+  "twitter": {
+    "bearer_token": "your_bearer_token_here"
+  }
+}
+```
+
+#### Come ottenere credenziali:
+
+**Instagram:**
+- Username/password del tuo account
+- ⚠️ Usa account secondario per evitare ban
+
+**Twitter:**
+1. Vai su [Twitter Developer Portal](https://developer.twitter.com/)
+2. Crea un'app
+3. Ottieni Bearer Token da "Keys and tokens"
+
+### Utilizzo
+```bash
+# Instagram - singolo profilo
+python download_images_profile.py @natgeo --platform instagram --max 30
+
+# Twitter - singolo profilo
+python download_images_profile.py @NASA --platform twitter --max 50
+
+# Multipli profili
+python download_images_profile.py @user1 @user2 @user3 --platform instagram
+
+# Da file con lista usernames
+python download_images_profile.py --file usernames_instagram.txt --platform instagram
+
+# Output personalizzato
+python download_images_profile.py @username --platform instagram --output ./my_downloads
+```
+
+### Formato file usernames.txt
+```
+@natgeo
+@nasa
+@bbcearth
+```
+
+### Output
+```
+downloaded_images/
+├── instagram_natgeo/
+│   ├── 20241202_143025_ABC123.jpg
+│   ├── 20241202_143025_ABC123.json    # metadata
+│   ├── 20241201_120000_XYZ789.jpg
+│   └── ...
+└── twitter_NASA/
+    ├── 20241202_090000_1234567890_1.jpg
+    ├── 20241202_090000_1234567890.json
+    └── ...
+```
+
+### Esempi Metadata (JSON)
+
+**Instagram:**
+```json
+{
+  "shortcode": "ABC123",
+  "date": "2024-12-02T14:30:25",
+  "caption": "Amazing photo!",
+  "likes": 15420,
+  "comments": 234,
+  "location": "New York, NY",
+  "url": "https://www.instagram.com/p/ABC123/"
+}
+```
+
+**Twitter:**
+```json
+{
+  "tweet_id": "1234567890",
+  "date": "2024-12-02T09:00:00",
+  "text": "Check out this amazing image!",
+  "likes": 5420,
+  "retweets": 892,
+  "url": "https://twitter.com/NASA/status/1234567890"
+}
+```
+
+### Limiti e Rate Limiting
+
+- **Instagram**: ~200 richieste/ora (gestito automaticamente)
+- **Twitter**: Varia in base al piano (Free/Basic/Pro)
+- Lo script attende automaticamente tra richieste
+
+### Troubleshooting
+
+**Errore login Instagram:**
+- Usa account secondario
+- Abilita autenticazione a due fattori e genera App Password
+- Instagram potrebbe richiedere verifica via email/SMS
+
+**Errore Twitter API:**
+- Verifica che il Bearer Token sia valido
+- Controlla limiti del tuo piano su Developer Portal
+
+**Dipendenze mancanti:**
+```bash
+pip install instaloader tweepy requests
+```
+
+### Note Legali
+
+⚠️ **DISCLAIMER**: 
+- Rispetta i Terms of Service delle piattaforme
+- Non usare per scraping massivo o commerciale
+- Solo per uso personale/educativo
+- Rispetta copyright e privacy degli utenti
+
+## Script Correlati
+
+- `upload_images.py` - Upload automatico immagini
+- `save_instagram_posts.py` - Salva post completi
+- `instagram_api_media_reader.py` - Legge dati via API
