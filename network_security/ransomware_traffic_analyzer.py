@@ -13,3 +13,10 @@ def load_traffic_data(filepath):
     except Exception as e:
         print(f"Errore nel caricamento del file: {e}")
         return None
+
+# Funzione per rilevare anomalie usando Z-Score
+def detect_anomalies_zscore(data, column, threshold=3):
+    z_scores = np.abs(stats.zscore(data[column]))
+    anomalies = data[z_scores > threshold]
+    return anomalies
+
