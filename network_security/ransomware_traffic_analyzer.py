@@ -33,3 +33,17 @@ MALICIOUS_IPS = [
 ]
 
 
+# Esempio di utilizzo
+if __name__ == "__main__":
+    # Carica i dati (esempio: log di traffico in CSV)
+    traffic_data = load_traffic_data('network_traffic.csv')
+    if traffic_data is not None:
+        # Analisi anomalie sul volume di traffico
+        anomalies = detect_anomalies_zscore(traffic_data, 'bytes_transferred')
+        print("Anomalie rilevate (Z-Score):")
+        print(anomalies)
+
+        # Controllo IP malevoli
+        malicious = check_malicious_ips(traffic_data, 'destination_ip', MALICIOUS_IPS)
+        print("\nConnessioni a IP noti per ransomware:")
+        print(malicious)
