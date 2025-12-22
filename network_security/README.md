@@ -4,7 +4,7 @@
 
 ---
 
-## 📌 Descrizione
+##  Descrizione
 
 Questo script analizza i log di traffico di rete (in formato CSV) per identificare:
 - **Anomalie statistiche** (es. picchi anomali di traffico) tramite Z-Score.
@@ -14,7 +14,7 @@ L’obiettivo è fornire un primo livello di allerta per potenziali attacchi inf
 
 ---
 
-## 🛠️ Requisiti
+##  Requisiti
 
 - Python 3.8+
 - Librerie richieste:
