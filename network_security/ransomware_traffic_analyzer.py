@@ -1,7 +1,3 @@
-“Script per rilevamento anomalie nel traffico di rete, 
-finalizzato all’identificazione di potenziali attacchi ransomware 
-mediante machine learning e analisi comportamentale.” 
-
 import pandas as pd
 import numpy as np
 from scipy import stats
