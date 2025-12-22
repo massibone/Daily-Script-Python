@@ -19,4 +19,16 @@ def detect_anomalies_zscore(data, column, threshold=3):
     z_scores = np.abs(stats.zscore(data[column]))
     anomalies = data[z_scores > threshold]
     return anomalies
+# Funzione per rilevare connessioni a IP noti per ransomware
+def check_malicious_ips(data, ip_column, malicious_ips_list):
+    data['is_malicious'] = data[ip_column].isin(malicious_ips_list)
+    malicious_connections = data[data['is_malicious']]
+    return malicious_connections
+
+# Esempio di lista di IP noti (da aggiornare con feed reali)
+MALICIOUS_IPS = [
+    '185.143.223.43',
+    '192.168.1.100',  # Esempio, sostituire con lista reale
+]
+
 
