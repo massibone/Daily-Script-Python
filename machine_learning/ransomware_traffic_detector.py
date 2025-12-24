@@ -22,3 +22,10 @@ def detect_anomalies(df):
     preds = clf.fit_predict(X)
     df['anomaly'] = preds
     return df[df['anomaly'] == -1]  # Solo gli anomali
+
+
+if __name__ == "__main__":
+    df = capture_packets(num=1000)
+    anomalies = detect_anomalies(df)
+    anomalies.to_csv('anomalous_packets.csv')
+    print(anomalies)
