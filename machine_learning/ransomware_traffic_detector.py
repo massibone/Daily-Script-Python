@@ -11,3 +11,7 @@ def packet_features(pkt):
         'proto': pkt[0][1].proto
     }
 
+def capture_packets(num=500):
+    packets = scapy.sniff(count=num)
+    features = [packet_features(pkt) for pkt in packets if pkt.haslayer(scapy.IP)]
+    return pd.DataFrame(features)
