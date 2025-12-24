@@ -15,3 +15,10 @@ def capture_packets(num=500):
     packets = scapy.sniff(count=num)
     features = [packet_features(pkt) for pkt in packets if pkt.haslayer(scapy.IP)]
     return pd.DataFrame(features)
+
+def detect_anomalies(df):
+    clf = IsolationForest(random_state=42)
+    X = df[['len', 'proto']]
+    preds = clf.fit_predict(X)
+    df['anomaly'] = preds
+    return df[df['anomaly'] == -1]  # Solo gli anomali
