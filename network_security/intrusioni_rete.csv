@@ -1,1 +1,20 @@
 
+src_ip,dst_ip,protocollo,intrusione
+192.168.1.10,192.168.1.20,TCP,0
+192.168.1.15,192.168.1.25,UDP,0
+10.0.0.5,192.168.1.30,TCP,1
+172.16.0.2,192.168.1.40,ICMP,1
+192.168.1.50,10.0.0.10,TCP,0
+10.0.0.8,172.16.0.3,UDP,1
+192.168.1.60,192.168.1.70,TCP,0
+172.16.0.4,192.168.1.80,ICMP,1
+192.168.1.90,10.0.0.12,UDP,0
+10.0.0.20,192.168.1.100,TCP,1
+'''
+src_ip → indirizzo IP sorgente (fittizio).
+dst_ip → indirizzo IP destinazione (fittizio).
+protocollo → tipo di protocollo (TCP, UDP, ICMP).
+intrusione → variabile target:
+0 = traffico normale
+1 = intrusione rilevata
+'''
