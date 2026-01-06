@@ -21,7 +21,7 @@ Daily-Script-Python/
 │   ├── rename_photos_by_exif.py
 │   └── exif_extractor.py
 │   
-├── instagram_automation/
+├── social_tools/
 │   ├── download_images_profile.py
 │   ├── upload_images.py
 │   ├── save_instagram_posts.py
