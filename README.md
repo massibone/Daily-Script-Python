@@ -25,7 +25,8 @@ Daily-Script-Python/
 │   ├── download_images_profile.py
 │   ├── upload_images.py
 │   ├── save_instagram_posts.py
-│   └── instagram_api_media_reader.py
+│   ├── instagram_api_media_reader.py
+│   └──instagram_caption_helper.py and howto
 │
 ├── machine_learning/
 │   ├── photo_style_classifier.py
