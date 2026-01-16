@@ -1,1 +1,22 @@
+# Esempio 1: caption base con default
+test1 = "Una giornata intera a Firenze solo con la Fuji X100V."
+print(add_niche_hashtags(test1))
+# Output:
+# Una giornata intera a Firenze solo con la Fuji X100V.
+#
+# #fujix100v \
+# #streetphotographyitaly \
+# #florencestreet \
+# #fujifilmitalia \
+# #x100vstreet
+
+# Esempio 2: custom hashtag (solo 2)
+test2 = "Street poetry in 35mm."
+custom_tags = ['#fujixseries', '#streetleaks']
+print(add_niche_hashtags(test2, custom_tags))
+# Output:
+# Street poetry in 35mm.
+#
+# #fujixseries \
+# #streetleaks
 
