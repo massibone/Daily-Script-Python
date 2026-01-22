@@ -45,7 +45,12 @@ Daily-Script-Python/
 └── file_converters/
 │   ├── base64_converter.py       # File principale 
 │   ├── README.md
+│   ├── if-elif-else_vs_registrypattern.py
 │   ├── requirements.txt
+│   └── Text_Tool/
+│       ├── Readme.md
+│       ├── Word_Counter.py
+│       └── text_utils.py
 │   └── examples/
 │       ├── codice-base64.txt
 │       └── esempio.json│
