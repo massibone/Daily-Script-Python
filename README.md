@@ -5,11 +5,18 @@ Daily-Script-Python/
 │   ├── extract_text_from_pdf.py
 │   └── text-utils-cli.py
 │
-├── data_conversion/
+├── data_conversion/e
 │   ├── json2csv.py
 │   ├── csv_merge.py
 │   ├── clean_csv.py 
 │   └── processa_CSV.py
+│
+├── data_privacy/
+│   ├── anonimizza_feedback.py       # Il tuo script
+│   ├── README.md                    # Documentazione su come usare gli script
+│   └── examples/
+│       ├── feedback_esempio.csv     # Esempio di file CSV di input
+│       └── output_esempio.txt       # Esempio di output anonimizzato
 │
 ├── image_processing/
 │   ├── image_utils.py
