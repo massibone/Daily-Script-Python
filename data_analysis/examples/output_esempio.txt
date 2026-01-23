@@ -1,0 +1,5 @@
+CUSTOMER_001 ha detto: 'AcmeCloud è fantastico, ma il supporto potrebbe essere più veloce.' Contatto: EMAIL_001@example.com, Tel: PHONE_001
+---
+CUSTOMER_002 ha segnalato: 'Ho avuto problemi con AcmeSync, ma il team ha risolto tutto.' Contatto: EMAIL_002@example.com, Tel: PHONE_002
+---
+Feedback anonimo: 'Il prodotto AcmeDrive è eccellente, ma il prezzo è alto.'
