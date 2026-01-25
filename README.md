@@ -48,7 +48,20 @@ Daily-Script-Python/
 │       └── .gitkeep
 │
 ├── data_analysis/
-│   └── numpy_correlation_analysis.py
+│   ├── numpy_correlation_analysis.py
+│   ├── anonimizza_feedback.py
+│   ├── README.md
+│   ├── filter_log_by_date.py
+│   ├── log_analyzer.py
+│   ├── og_report_automation.py
+│   ├── analizza_log.py
+│   ├── genera_report_csv.py
+│   └── examples/
+│       ├── feedback_esempio.csv
+│       ├── output_esempio.txt
+│       ├── vendite.csv
+│       ├── report_vendite.py
+│       ├── accessi.log 
 └── file_converters/
 │   ├── base64_converter.py       # File principale 
 │   ├── README.md
