@@ -16,3 +16,10 @@ feedback
 "Maria Rossi ha detto: 'AcmeCloud è fantastico, ma il supporto potrebbe essere più veloce.' Contatto: maria.rossi@example.com, Tel: +39 123 4567890"
 "Luca Bianchi ha segnalato: 'Ho avuto problemi con AcmeSync, ma il team ha risolto tutto.' Contatto: luca.bianchi@example.com, Tel: 333 1234567"
 "Feedback anonimo: 'Il prodotto AcmeDrive è eccellente, ma il prezzo è alto.'"
+
+Istruzioni per l'uso
+Modifica i parametri nei blocchi if __name__ == "__main__"::
+file_input: il percorso del tuo file di log.
+formato_input: "testo", "csv", o "json".
+data_inizio e data_fine: per il filtro per data.
+ip_list: per il filtro per IP.
