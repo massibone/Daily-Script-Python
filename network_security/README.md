@@ -2,7 +2,7 @@
 
 **Script per il rilevamento di anomalie nel traffico di rete finalizzato all’identificazione di potenziali attacchi ransomware tramite machine learning e analisi comportamentale.**
 
----
+----
 
 ##  Descrizione
 
