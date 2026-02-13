@@ -21,7 +21,7 @@ except Exception as e:
 # Chiediamo l'URL del post da analizzare.
 post_url = input("Inserisci l'URL del post di cui leggere i dati: ")
 
-# Lezione 4: L'azione principale - Leggere i dati via API
+# Leggere i dati via API
 print("\nRecupero le informazioni del post tramite API...")
 try:
     # 1. Convertiamo l'URL nell'ID primario del media (media_pk).
