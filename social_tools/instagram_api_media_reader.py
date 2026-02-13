@@ -36,7 +36,6 @@ try:
     #    per poterlo esplorare e stampare più facilmente.
     media_info_dict = media_info.dict()
 
-    # Lezione 5: Presentare i risultati
     # Stampiamo alcune delle informazioni più interessanti.
     print("\n--- Informazioni Principali del Post ---")
     print(f"ID del Post (PK): {media_info_dict.get('pk')}")
