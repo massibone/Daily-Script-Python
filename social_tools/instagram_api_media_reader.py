@@ -3,11 +3,9 @@ from instagrapi import Client
 import getpass
 import json
 
-# Lezione 2: Autenticazione sicura
 # Creiamo un'istanza del client API.
 cl = Client()
 
-# Chiediamo le credenziali all'utente.
 # getpass.getpass nasconde l'input della password per sicurezza.
 username = input("Inserisci il tuo nome utente Instagram: ")
 password = getpass.getpass("Inserisci la tua password Instagram: ")
@@ -20,7 +18,6 @@ except Exception as e:
     print(f"Errore durante il login: {e}")
     exit()
 
-# Lezione 3: Ottenere l'input dell'utente
 # Chiediamo l'URL del post da analizzare.
 post_url = input("Inserisci l'URL del post di cui leggere i dati: ")
 
