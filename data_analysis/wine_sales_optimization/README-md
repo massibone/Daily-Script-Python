@@ -1,0 +1,32 @@
+# 🍷 Wine Sales Optimization
+
+Un problema di programmazione dinamica classico che risolve il dilemma ottimale di vendita di vini.
+
+## Problema
+
+Hai una collezione di N vini in fila. Ogni vino ha un prezzo iniziale `p[i]`.
+- Ogni anno il vino aumenta di valore: nel anno `y`, il prezzo è `y * p[i]`
+- Puoi vendere esattamente 1 vino per anno
+- Puoi vendere solo il vino più a sinistra o più a destra
+- Vuoi massimizzare il profitto totale
+
+## Soluzione
+
+### Approccio 1: Memoizzazione Base
+- **Complessità Temporale**: O(N²)
+- **Complessità Spaziale**: O(N²)
+- Elimina l'argomento ridondante `year` calcolandolo internamente
+
+### Approccio 2: Memoizzazione Completa + Tracciamento
+- **Complessità Temporale**: O(N²)
+- **Complessità Spaziale**: O(N²)
+- Include la ricostruzione della soluzione ottimale
+
+## Esempio
+
+```python
+prezzi = [2, 3, 5, 1, 4]
+# Profitto massimo: 50
+Riferimenti
+HackerEarth - Dynamic Programming Notes
+Get Better at CP in 2 Months
