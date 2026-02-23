@@ -1,9 +1,4 @@
 
-'''
-NP CORRELATION CORRCOEF
-The code to print out the mean height is already included. 
-Complete the code for the median height. 
-'''
 
 # Import numpy
 import numpy as np
