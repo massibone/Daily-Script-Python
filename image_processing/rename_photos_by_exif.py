@@ -1,3 +1,4 @@
+'''
 Rinomina e organizza automaticamente i file fotografici basandosi sui metadati EXIF.
 
 Formato output personalizzabile, es: YYYY-MM-DD_Citta_001.jpg
@@ -26,7 +27,7 @@ Esempi:
 
   # Usa un formato di nome file personalizzato
   python rename_photos_by_exif.py ./foto_input ./foto_output --format "{date}_{original_name}_{counter}"
-"""
+'''
 
 import os
 import sys
