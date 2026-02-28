@@ -1,4 +1,3 @@
-
 # Estrazione automatica di testo da pdf multipli
 import os
 from pathlib import Path
