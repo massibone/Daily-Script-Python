@@ -7,3 +7,9 @@ Questa cartella contiene script Python per la gestione e l'anonimizzazione di da
 
 ## 📂 Struttura della Cartella
 
+data_privacy/
+├── anonimizza_feedback.py    # Script per anonimizzare feedback dei clienti
+├── README.md                 # Questo file
+└── examples/                 # Esempi di input/output
+├── feedback_esempio.csv  # Esempio di file CSV con feedback
+└── output_esempio.txt    # Esempio di output anonimizzato
