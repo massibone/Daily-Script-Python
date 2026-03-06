@@ -29,7 +29,9 @@ Daily-Script-Python/
 │   └── exif_extractor.py
 │   
 ├── social_tools/
+│   ├── analizza_post_ig.py
 │   ├── download_images_profile.py
+│   ├── download_images_profileREADME
 │   ├── upload_images.py
 │   ├── save_instagram_posts.py
 │   ├── instagram_api_media_reader.py
