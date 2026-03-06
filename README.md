@@ -54,7 +54,7 @@ Daily-Script-Python/
 │   ├── README.md
 │   ├── filter_log_by_date.py
 │   ├── log_analyzer.py
-│   ├── og_report_automation.py
+│   ├── log_report_automation.py
 │   ├── analizza_log.py
 │   ├── genera_report_csv.py
 │   └── examples/
