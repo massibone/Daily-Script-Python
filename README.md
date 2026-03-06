@@ -32,11 +32,12 @@ Daily-Script-Python/
 │   ├── analizza_post_ig.py
 │   ├── download_images_profile.py
 │   ├── download_images_profileREADME
+│   ├── genera_caption.py
 │   ├── upload_images.py
 │   ├── save_instagram_posts.py
 │   ├── instagram_api_media_reader.py
 │   ├── save_instagram_posts.py
-│   └──instagram_caption_helper.py and howto
+│   └── instagram_caption_helper.py and howto
 │
 ├── machine_learning/
 │   ├──accessi_sito_web.csv
