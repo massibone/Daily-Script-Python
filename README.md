@@ -46,8 +46,9 @@ Daily-Script-Python/
 │   ├── photo_style_classifier.py
 │   ├── linear_regression_boston.py
 |   ├── logging_profiling_optimizer.py
-| ├──    phishing_logistic_regression.py
-|   ├─  ml_predictor.py 
+|   ├── phishing_logistic_regression.py
+|   ├─  ml_predictor.py
+|   ├─  ThreatIntelligence.py
 │   └── models/
 │       └── .gitkeep
 │
