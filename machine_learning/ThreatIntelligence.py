@@ -1,4 +1,5 @@
-'''pipeline minima di classificazione phishing testi
+'''
+pipeline minima di classificazione phishing testi
 Esempio base di vettorializzazione testo, classificazione con RandomForest basata su frasi esempio di email phishing e non
 '''
 from sklearn.feature_extraction.text import TfidfVectorizer
