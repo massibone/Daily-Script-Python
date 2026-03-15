@@ -1,4 +1,4 @@
-organize_x100v_photos.py
+
 import os
 import shutil
 from datetime import datetime
