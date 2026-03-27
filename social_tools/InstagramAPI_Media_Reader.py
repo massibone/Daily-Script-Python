@@ -4,10 +4,10 @@
 ## Come funziona
 
 #1. Copia il tuo Access Token di Instagram Graph API e il tuo user_id.
-#2. Inseriscili nel file `miniscript.py`.
+#2. Inseriscili nel file `InstagramAPI_Media_Reader.py`.
 #3. Avvia lo script con:
     ```
-    python miniscript.py
+    python InstagramAPI_Media_Reader.py
     ```
 #4. Visualizzerai a terminale ID, caption, URL, data e permalink dei tuoi post.
 
