@@ -3,7 +3,7 @@
 process_docs.py
 Mini-pipeline: scansiona una cartella, estrae tabelle da PDF (e tenta da DOCX/MD),
 pulisce e normalizza con Polars e scrive un CSV unificato.
-Comportamento ragionevole di default; adattare mapping colonne secondo necessità.
+
 """
 
 import sys
