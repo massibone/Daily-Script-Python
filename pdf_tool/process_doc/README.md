@@ -1,1 +1,1 @@
-
+Script che combina MarkItDown (per l’estrazione/parsificazione di documenti testuali) e Polars (per trasformazioni dati veloci) per processare una cartella di documenti d’ufficio: estrae tabelle dai PDF (con tabula-py / camelot come fallback), normalizza colonne e produce un CSV pulito unificato.
