@@ -1,0 +1,9 @@
+polars
+markitdown
+tabula-py
+camelot-py[cv]
+pdfplumber
+python-docx
+pypandoc
+pandas
+pyarrow
