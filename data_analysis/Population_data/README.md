@@ -4,7 +4,6 @@ Modulo semplice per gestire dati di popolazione.
 
 ## Utilizzo
 
-```python
 from population_data import PopulationData
 
 # Creare l'oggetto
