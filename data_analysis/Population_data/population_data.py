@@ -1,6 +1,4 @@
 """
-population_data.py
-
 Modulo semplice per accedere ai dati di popolazione.
 """
 
