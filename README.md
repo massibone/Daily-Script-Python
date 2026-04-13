@@ -83,7 +83,7 @@ Daily-Script-Python/
 │       ├──
 │       ├──
 │       └── text_utils.py
-
+│
 │   └── examples/
 │       ├── codice-base64.txt
 │       └── esempio.json│
