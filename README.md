@@ -40,8 +40,8 @@ Daily-Script-Python/
 │   └── instagram_caption_helper.py and howto
 │
 ├── machine_learning/
-│   ├──accessi_sito_web.csv
-│   ├──kmeans_accessi_sito.py
+│   ├── accessi_sito_web.csv
+│   ├── kmeans_accessi_sito.py
 │   ├── anomaly_detection_example.py
 │   ├── photo_style_classifier.py
 │   ├── linear_regression_boston.py
