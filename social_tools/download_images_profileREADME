@@ -4,7 +4,6 @@ Collezione di tool per automatizzare operazioni su social media.
 ## 📸 download_images_profile.py
 
 Scarica immagini da profili social media (Instagram, Twitter/X).
-
 ### Caratteristiche
 
 - ✅ Supporto Instagram (via instaloader)
