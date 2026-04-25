@@ -1,4 +1,3 @@
-
 # Classe Python modulare per caricare e processare dati CSV
 class CSVProcessor:
     def __init__(self, filepath):
