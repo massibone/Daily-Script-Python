@@ -1,0 +1,3 @@
+id,nome,cognome,email,telefono,indirizzo,prodotto
+1,CUSTOMER_001,CUSTOMER_001,EMAIL_001@example.com,PHONE_001,ADDRESS_001,AcmeCloud
+2,CUSTOMER_002,CUSTOMER_002,EMAIL_002@example.com,PHONE_002,ADDRESS_002,AcmeSync
