@@ -1,0 +1,3 @@
+id,nome,cognome,email,telefono,indirizzo,prodotto
+1,Mario,Rossi,mario.rossi@example.com,3331234567,"Via Roma 1, Milano, MI 20121",AcmeCloud
+2,Luca,Bianchi,luca.bianchi@example.com,3337654321,"Via Verdi 2, Torino, TO 10121",AcmeSync
