@@ -12,6 +12,7 @@ Sistema OOP per calcolare consumo, autonomia, costi ed emissioni di veicoli.
 - ✅ Confronto multiplo veicoli
 - ✅ Report dettagliati formattati
 
+
 **Tipi supportati:**
 - `Car` - Auto benzina/diesel
 - `ElectricCar` - Auto elettrica
