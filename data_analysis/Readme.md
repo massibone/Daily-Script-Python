@@ -1,5 +1,4 @@
 
-
 ### 1. `anonimizza_feedback.py`
 **Descrizione:**
 Anonimizza i feedback dei clienti sostituendo nomi, email e numeri di telefono con identificatori generici (es. `CUSTOMER_001`, `EMAIL_001@example.com`, `PHONE_001`). I nomi dei prodotti vengono lasciati intatti.
