@@ -16,7 +16,6 @@ import sys
 from datetime import datetime
 
 
-
 def standardize_date_column(df, column_name):
     """Converte date in formato ISO YYYY-MM-DD."""
     if column_name not in df.columns:
