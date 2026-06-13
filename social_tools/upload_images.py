@@ -1,6 +1,7 @@
 import os
 from github import Github
 
+
 g = Github('TOKEN')
 repo = g.get_repo('username/project')
 for img in os.listdir('imgs'):
