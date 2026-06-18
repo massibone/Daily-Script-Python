@@ -22,4 +22,41 @@ Se lo metti dentro `Daily-Script-Python/pdf_tool/`, il nome più chiaro è:
 ```text
 split_rename_pdf.py
 ```
+## Utilizzo
+Esempio base:
 
+```bash
+python split_rename_pdf.py ./pdf_files
+```
+
+Con cartella di output personalizzata:
+
+```bash
+python split_rename_pdf.py ./pdf_files -o ./split_output
+```
+
+Con pattern personalizzato:
+
+```bash
+python split_rename_pdf.py ./pdf_files -o ./split_output -p "{stem}-p{page}-of-{total}"
+```
+
+## Placeholder disponibili
+- `{stem}`: nome file sorgente in formato pulito
+- `{original}`: nome file sorgente originale
+- `{page}`: numero pagina
+- `{total}`: numero totale pagine
+
+## Output esempio
+Da:
+
+```text
+fatture-marzo.pdf
+```
+
+Ottieni:
+
+```text
+fatture-marzo-page-1.pdf
+fatture-marzo-page-2.pdf
+fatture-marzo-page-3.pdf
