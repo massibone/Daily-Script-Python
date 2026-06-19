@@ -21,8 +21,6 @@ import csv
 import os
 import sys
 
-
-
 def csv_merge(files, output, keep_headers=True, skip_first_header=True, encoding='utf-8'):
     """
     Unisce più file CSV in un unico file di output.
