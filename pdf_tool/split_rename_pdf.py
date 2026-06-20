@@ -49,7 +49,6 @@ def split_pdf(input_pdf: Path, output_dir: Path, pattern: str) -> list[Path]:
         doc.close()
     return created_files
 
-
 def batch_split(input_dir: Path, output_dir: Path, pattern: str) -> dict[str, list[str]]:
     if not input_dir.exists():
         raise FileNotFoundError(f"Input directory not found: {input_dir}")
