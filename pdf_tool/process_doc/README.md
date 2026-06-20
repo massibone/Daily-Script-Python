@@ -10,7 +10,6 @@ Mini-pipeline Python che estrae tabelle da PDF/DOCX/MD, normalizza con Polars e 
 - Ghostscript, OpenCV (per camelot)
 
 ## Installazione
-```bash
 python -m venv .venv
 source .venv/bin/activate   # o .venv\Scripts\activate su Windows
 pip install -r requirements.txt
