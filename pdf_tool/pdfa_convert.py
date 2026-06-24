@@ -1,4 +1,4 @@
-# pip install pymupdf
+
 
 import sys
 import fitz
