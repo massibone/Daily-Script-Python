@@ -1,9 +1,8 @@
 
-
 # pdfa_convert.py
 
 -----
-README.md
+
 # PDF/A Converter (PyMuPDF)
 ## Cos’è
 Script Python che converte un PDF in **PDF/A-1, PDF/A-2 o PDF/A-3** usando **PyMuPDF**.
