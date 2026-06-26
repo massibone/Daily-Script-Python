@@ -40,7 +40,7 @@ Se devi archiviare anche allegati/extra contenuti dentro al file: PDF/A-3.
 Installa dipendenze:
 
 pip install pymupdf
-##Uso
+## Uso
 
 python pdfa\_convert.py input.pdf output.pdfa [1|2|3]
 Se ometti [1|2|3], usa PDF/A-1.
@@ -49,7 +49,7 @@ level accetta solo:
 2 → PDF/A-2
 3 → PDF/A-3
 
-##Esempi
+## Esempi
 
 python pdfa\_convert.py input.pdf output\_pa1.pdf 1
 python pdfa\_convert.py input.pdf output\_pa2.pdf 2
