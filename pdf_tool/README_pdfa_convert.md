@@ -1,7 +1,4 @@
 
-# pdfa_convert.py
-
------
 
 # PDF/A Converter (PyMuPDF)
 ## Cos’è
