@@ -1,6 +1,7 @@
 from PIL import Image
 import os
 
+
 def crea_thumbnail(input_path, output_path, size=(300, 300)):
     """
     Crea una thumbnail da un'immagine, mantenendo le proporzioni originali.
