@@ -45,6 +45,7 @@ def anonimizza_feedback(feedback_data):
     return "\n---\n".join(messaggi_elaborati)
 
 # Esempio di CSV di input
+
 csv_esempio = """feedback
 "Maria Rossi ha detto: 'AcmeCloud è fantastico, ma il supporto potrebbe essere più veloce.' Contatto: maria.rossi@example.com, Tel: +39 123 4567890"
 "Luca Bianchi ha segnalato: 'Ho avuto problemi con AcmeSync, ma il team ha risolto tutto.' Contatto: luca.bianchi@example.com, Tel: 333 1234567"
