@@ -12,7 +12,6 @@ Complessità:
 
 from typing import List
 
-
 def max_profit_from_wine_sales(prices: List[int]) -> int:
     """
     Calcola il profitto massimo dalla vendita di vini.
