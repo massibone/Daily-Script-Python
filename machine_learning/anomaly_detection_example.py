@@ -13,3 +13,4 @@ plt.scatter(X[:, 0], X[:, 1], c=labels, cmap='coolwarm')
 plt.title("Isolation Forest Anomaly Detection")
 plt.show()
 
+
