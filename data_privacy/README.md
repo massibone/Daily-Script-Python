@@ -4,7 +4,6 @@ Questa cartella contiene script Python per la gestione e l'anonimizzazione di da
 
 ----
 
-
 ## 📂 Struttura della Cartella
 
 data_privacy/
