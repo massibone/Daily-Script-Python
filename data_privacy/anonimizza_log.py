@@ -1,7 +1,6 @@
 import re
 import argparse
 
-
 def anonimizza_log(input_file, output_file=None):
     """
     Anonimizza un file di log sostituendo:
