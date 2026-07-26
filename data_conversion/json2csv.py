@@ -1,4 +1,5 @@
 '''
+
 Converte un file JSON in un file CSV utilizzando la libreria pandas.
 Esempio d'uso (nel tuo script principale o nella console Python):
     import json2csv
