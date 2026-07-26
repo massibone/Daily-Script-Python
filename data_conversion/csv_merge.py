@@ -1,6 +1,7 @@
 '''
 Unisce più file CSV in un unico file
 
+
 Funzionalità:
 - Unione di multipli file CSV
 - Gestione automatica degli header (skip duplicati)
