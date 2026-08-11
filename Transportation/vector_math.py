@@ -1,5 +1,6 @@
 from transportation.vector_math import R2Vector, R3Vector, angle_between
 
+
 # Vettori 2D
 v1 = R2Vector(x=3, y=4)
 v2 = R2Vector(x=1, y=2)
