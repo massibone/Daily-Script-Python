@@ -188,6 +188,7 @@ class Vehicle(ABC):
 # Veicoli a Combustione
 # ============================================================================
 
+
 class Car(Vehicle):
     """
     Auto a benzina o diesel.
