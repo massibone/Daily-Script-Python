@@ -14,3 +14,4 @@ ibrida = HybridCar(25, 43, 1.75, 60, "Toyota", "Prius")
 
 # Confronta
 print(compare_vehicles([benzina, elettrica, ibrida]))
+
