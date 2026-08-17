@@ -2,6 +2,7 @@
 Esempio: Confronto tra diversi tipi di auto
 '''
 
+
 import sys
 sys.path.append('..')
 
