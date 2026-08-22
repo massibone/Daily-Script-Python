@@ -19,5 +19,5 @@ print(data.get_population(2041))  # 9.09
 # Calcolare crescita
 print(data.get_growth_rate(2041, 2062))  # 10.33%
 Test
-Copy
+
 python test_population.py
