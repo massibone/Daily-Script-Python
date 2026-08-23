@@ -26,7 +26,6 @@ def standardize_date_column(df, column_name):
     print(f"[OK] Convertita colonna {column_name} in formato ISO")
     return df
 
-
 def rename_columns(df):
     """Rende i nomi colonna uniformi: minuscolo + underscore."""
     df.columns = (
