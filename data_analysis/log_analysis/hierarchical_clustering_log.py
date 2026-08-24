@@ -3,6 +3,7 @@ from sklearn.cluster import AgglomerativeClustering
 import matplotlib.pyplot as plt
 import numpy as np
 
+
 # Funzione per generare dati di log di sistema di esempio
 def generate_sample_log_data(num_samples=100):
     timestamps = pd.to_datetime(np.random.randint(1672531200, 1704067200, num_samples), unit='s') # Dal 2023 al 2024
