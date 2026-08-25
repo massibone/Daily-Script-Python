@@ -4,6 +4,7 @@ Vehicle Calculator - Sistema per calcolo consumo, autonomia e proprietà veicoli
 Questo modulo fornisce un framework orientato agli oggetti per modellare diversi
 tipi di veicoli e calcolarne autonomia, consumi, costi e caratteristiche.
 
+
 🚗 Tipi di veicolo supportati:
   • Car (Benzina/Diesel)
   • ElectricCar (Elettrica)
