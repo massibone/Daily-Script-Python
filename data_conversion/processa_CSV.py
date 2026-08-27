@@ -2,7 +2,6 @@
 class CSVProcessor:
     def __init__(self, filepath):
         self.filepath = filepath
-
     
     def load_data(self):
         import pandas as pd
