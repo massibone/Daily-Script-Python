@@ -2,6 +2,7 @@ import re
 import pandas as pd
 from io import StringIO
 
+
 def anonimizza_feedback(feedback_data):
     """
     Anonimizza una lista di feedback sostituendo dati personali con token pseudonimi.
