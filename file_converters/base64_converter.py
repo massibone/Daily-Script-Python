@@ -2,6 +2,7 @@
 Base64 to File Converter
 Converte codice Base64 in file PDF, JPEG, PNG, TXT
 
+
 Questo programma:
 1. Legge codice Base64 da file .txt o JSON
 2. Decodifica automaticamente
