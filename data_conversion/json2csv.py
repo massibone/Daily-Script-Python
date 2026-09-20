@@ -5,6 +5,7 @@ Esempio d'uso (nel tuo script principale o nella console Python):
     json2csv.convert("dati_input.json", "dati_output.csv")
 '''
 
+
 import pandas as pd
 import os
 
