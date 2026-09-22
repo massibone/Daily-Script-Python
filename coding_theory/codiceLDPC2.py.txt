@@ -1,0 +1,148 @@
+import numpy as np
+from scipy.sparse import csr_matrix
+import random
+
+class LDPC:
+    def __init__(self, N, K, weight_row=3, weight_col=6):
+        """
+        Inizializza un codice LDPC
+        N: lunghezza della parola di codice
+        K: lunghezza del messaggio
+        weight_row: peso delle righe nella matrice di parità
+        weight_col: peso delle colonne nella matrice di parità
+        """
+        self.N = N
+        self.K = K
+        self.M = N - K
+        self.weight_row = weight_row
+        self.weight_col = weight_col
+        self.H = self._generate_parity_check_matrix()
+
+    def _generate_parity_check_matrix(self):
+        """
+        Genera una matrice di controllo di parità sparsa casuale
+        """
+        H = np.zeros((self.M, self.N), dtype=bool)
+        
+        # Per ogni riga
+        for i in range(self.M):
+            # Seleziona casualmente weight_row colonne
+            cols = random.sample(range(self.N), self.weight_row)
+            H[i, cols] = True
+            
+        # Assicura che ogni colonna abbia il peso desiderato
+        for j in range(self.N):
+            current_weight = np.sum(H[:, j])
+            if current_weight > self.weight_col:
+                # Rimuovi 1 in eccesso
+                ones = np.where(H[:, j])[0]
+                to_remove = random.sample(list(ones), int(current_weight - self.weight_col))
+                H[to_remove, j] = False
+            elif current_weight < self.weight_col:
+                # Aggiungi 1 mancanti
+                zeros = np.where(~H[:, j])[0]
+                to_add = random.sample(list(zeros), int(self.weight_col - current_weight))
+                H[to_add, j] = True
+                
+        return csr_matrix(H)
+
+    def encode(self, message):
+        """
+        Codifica un messaggio usando il codice LDPC
+        """
+        if len(message) != self.K:
+            raise ValueError(f"Il messaggio deve essere lungo {self.K} bit")
+
+        codeword = np.zeros(self.N, dtype=int)
+        codeword[:self.K] = message
+        
+        # Calcola i bit di parità
+        parity = codeword.copy()
+        parity[self.K:] = 0
+        for i in range(self.M):
+            row = self.H.getrow(i).toarray()[0]
+            parity[self.K + i] = np.sum(message[row[:self.K] == 1]) % 2
+        codeword[self.K:] = parity[self.K:]
+        
+        return codeword
+
+    def decode(self, received, max_iterations=50):
+        """
+        Decodifica un messaggio usando l'algoritmo di propagazione della credenza
+        """
+        # Inizializza le probabilità dei bit
+        prob = np.zeros((self.N, 2))
+        for i in range(self.N):
+            if received[i] > 0:
+                prob[i, 1] = 0.9
+                prob[i, 0] = 0.1
+            else:
+                prob[i, 1] = 0.1
+                prob[i, 0] = 0.9
+
+        # Iterazioni di decodifica
+        for _ in range(max_iterations):
+            # Check node update
+            for i in range(self.M):
+                row = self.H.getrow(i).toarray()[0]
+                connected_vars = np.where(row == 1)[0]
+                
+                # Calcola il prodotto dei segni
+                prod = 1
+                for var in connected_vars:
+                    prod *= (prob[var, 1] - prob[var, 0])
+                
+                # Aggiorna le probabilità
+                for var in connected_vars:
+                    prob[var, 1] = (1 + prod) / 2
+                    prob[var, 0] = (1 - prod) / 2
+
+            # Decisione hard
+            decoded = np.argmax(prob, axis=1)
+            
+            # Verifica se il codice è valido
+            syndrome = np.remainder(self.H.dot(decoded), 2)
+            if np.all(syndrome == 0):
+                break
+
+        return decoded[:self.K]  # Restituisce solo i bit di messaggio
+
+def simulate_transmission(message, error_prob=0.1):
+    """
+    Simula la trasmissione su un canale binario simmetrico
+    """
+    received = message.copy()
+    errors = np.random.random(len(message)) < error_prob
+    received[errors] = 1 - received[errors]
+    return received
+
+def main():
+    # Parametri del codice
+    N = 20
+    K = 10
+    
+    # Crea il codice LDPC
+    ldpc = LDPC(N, K)
+    
+    # Genera un messaggio casuale
+    message = np.random.randint(0, 2, K)
+    print(f"Messaggio originale: {message}")
+    
+    # Codifica il messaggio
+    encoded = ldpc.encode(message)
+    print(f"Messaggio codificato: {encoded}")
+    
+    # Simula la trasmissione con errori
+    received = simulate_transmission(encoded, error_prob=0.1)
+    print(f"Messaggio ricevuto: {received}")
+    
+    # Decodifica il messaggio
+    decoded = ldpc.decode(received)
+    print(f"Messaggio decodificato: {decoded}")
+    
+    # Calcola il numero di errori
+    errors = np.sum(message != decoded)
+    print(f"Numero di errori: {errors}")
+
+if __name__ == "__main__":
+    main()
