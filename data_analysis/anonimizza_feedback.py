@@ -2,6 +2,7 @@ import re
 import pandas as pd
 from io import StringIO
 
+
 def anonimizza_feedback(feedback_data):
     # Inizializza gli ID per clienti, email e telefoni
     customer_id = 1
