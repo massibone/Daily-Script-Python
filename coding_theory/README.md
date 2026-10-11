@@ -1,5 +1,6 @@
 LDPC (Low-Density Parity-Check)
 
+
 Implementazione in Python di un codice LDPC: costruzione della matrice di parità, codifica sistematica, trasmissione su canale rumoroso (BSC) e decodifica con belief propagation (sum-product).
 
 Cosa fa
