@@ -32,6 +32,7 @@ MALICIOUS_IPS = [
 ]
 
 
+
 # Esempio di utilizzo
 if __name__ == "__main__":
     # Carica i dati (esempio: log di traffico in CSV)
