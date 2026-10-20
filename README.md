@@ -106,6 +106,7 @@ Daily-Script-Python/
 │
 └── transportation/                          # 
     ├── vehicle_calculator.py               # Script principale
+    
     ├── vector_math.py                      # Libreria vettori (opzionale)
     └── examples/                           # Esempi d'uso
         ├── compare_cars.py
