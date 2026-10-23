@@ -2,6 +2,7 @@
 
 Convertitore bidirezionale Base64 ↔ File con GUI e CLI.
 
+
 ## 🎯 Caratteristiche
 
 - ✅ Converti Base64 in PDF, JPEG, PNG, GIF
