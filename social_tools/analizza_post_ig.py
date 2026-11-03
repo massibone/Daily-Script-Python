@@ -24,4 +24,3 @@ print(risultati)
 # Output: hashtag | total_engagement
 # #streetphotography | 1250
 
-ss
