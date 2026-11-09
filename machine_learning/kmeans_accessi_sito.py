@@ -2,6 +2,7 @@ import pandas as pd
 from sklearn.cluster import KMeans
 import matplotlib.pyplot as plt
 
+
 def preprocess_data(df):
     """
     Converte le colonne date/ora in numeri per K-Means
