@@ -4,6 +4,7 @@ from sklearn.model_selection import train_test_split
 from sklearn.linear_model import LogisticRegression
 from sklearn.metrics import accuracy_score, classification_report
 
+
 # Carica il dataset
 # Assicurati che 'phishing.csv' sia nella stessa cartella dello script
 data = pd.read_csv('phishing.csv')
