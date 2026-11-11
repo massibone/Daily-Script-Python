@@ -7,7 +7,6 @@ import pandas as pd
 import numpy as np
 from typing import List, Tuple
 
-
 def detect_photo_outliers(csv_path: Path) -> List[Tuple[str, float]]:
     """Trova foto outlier su ISO/shutter speed."""
     df = pd.read_csv(csv_path)[['iso', 'shutter_speed']]
